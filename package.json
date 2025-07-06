@@ -1,0 +1,16 @@
+{
+  "name": "smart-recruiters",
+  "version": "1.0.0",
+  "description": "Take home task for Smart Recruiters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.6.2",
+    "scss": "^0.2.4"
+  }
+}
