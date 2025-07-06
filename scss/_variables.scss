@@ -1,0 +1,98 @@
+// Color Palette
+$color-primary: #13304a;
+$color-secondary: #076d59;
+$color-tertiary: #37b971;
+$color-quaternary: #e9ece7;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-content: #222222;
+$color-danger: #9f0000;
+
+// Typography
+$font-family: 'Inter', sans-serif;
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.833125rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 1.75rem;
+$font-size-3xl: 2rem;
+$font-size-4xl: 2.375rem;
+$font-size-5xl: 3rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-line-height: 140%;
+$font-line-height-heading: 110.00000000000001%;
+
+$font-letter-spacing-none: 0%;
+
+$font-paragraph-spacing-heading: 0.5625rem;
+$font-paragraph-spacing-p: 1.25rem;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  line-height: $font-line-height-heading;
+  letter-spacing: $font-letter-spacing-none;
+}
+
+h1 {
+  font-size: $font-size-5xl;
+}
+
+h2 {
+  font-size: $font-size-4xl;
+}
+
+h3 {
+  font-size: $font-size-3xl;
+}
+
+h4 {
+  font-size: $font-size-2xl;
+}
+
+h5 {
+  font-size: $font-size-xl;
+}
+
+h6 {
+  font-size: $font-size-lg;
+}
+
+h1 + h1,
+h2 + h2,
+h3 + h3,
+h4 + h4,
+h5 + h5,
+h6 + h6 {
+  margin-top: $font-paragraph-spacing-heading;
+}
+
+p {
+  font-size: $font-size-md;
+  font-weight: $font-weight-normal;
+  line-height: $font-line-height;
+  letter-spacing: $font-letter-spacing-none;
+}
+
+p + p {
+  margin-top: $font-paragraph-spacing-p;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-sm + .text-sm {
+    margin-top: $font-paragraph-spacing-heading;
+}

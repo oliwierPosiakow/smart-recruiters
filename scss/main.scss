@@ -1,4 +1,7 @@
-* {
-  font-size: 24px;
-  color: red;
+@use 'base' as *;
+@use 'variables' as *;
+
+body {
+  font-family: $font-family;
+  color: $color-content;
 }
