@@ -24,6 +24,7 @@ $font-size-5xl: 3rem;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
+$font-weight-bolder: 600;
 $font-weight-bold: 700;
 
 $font-line-height: 140%;
@@ -95,4 +96,13 @@ p + p {
 
 .text-sm + .text-sm {
     margin-top: $font-paragraph-spacing-heading;
+}
+
+button {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bolder;
+  line-height: $font-line-height;
+  letter-spacing: $font-letter-spacing-none;
+  text-transform: capitalize;
+  vertical-align: center;
 }
