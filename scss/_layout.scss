@@ -1,0 +1,17 @@
+@use 'mixins' as *;
+
+// BREAKPOINTS
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+.content {
+  @include flex-column;
+  max-width: 1260px;
+  padding: 1.875em;
+  gap: 1.25em;
+}

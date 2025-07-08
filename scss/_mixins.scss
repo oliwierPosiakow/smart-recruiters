@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin align-center {
+  align-items: center;
+}
+
+@mixin gap {
+  gap: 20px;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin button-icon {
+  display: inline-block;
+  color: $color-white;
+  width: 16px;
+  height: 16px;
+}

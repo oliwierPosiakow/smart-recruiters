@@ -1,0 +1,20 @@
+@use '../mixins' as *;
+
+.section {
+  @include gap;
+  @include flex-column;
+  &__title {
+    @include text-center;
+  }
+  &__content {
+    max-width: 800px;
+  }
+  &__buttons {
+    @include flex-row;
+    gap: 15px;
+  }
+  &--center {
+    @include flex-center;
+
+  }
+}
