@@ -3,7 +3,6 @@
 .section {
   @include gap;
   @include flex-column;
-  @include flex-center;
   &__title {
     @include text-center;
   }
@@ -13,5 +12,9 @@
   &__buttons {
     @include flex-row;
     gap: 15px;
+  }
+  &--center {
+    @include flex-center;
+
   }
 }

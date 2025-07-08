@@ -90,10 +90,6 @@ p + p {
   margin-top: $font-paragraph-spacing-p;
 }
 
-.text-sm {
-  font-size: $font-size-sm;
-}
-
 .text-sm + .text-sm {
     margin-top: $font-paragraph-spacing-heading;
 }

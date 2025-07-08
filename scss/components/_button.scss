@@ -4,11 +4,13 @@
 .button {
   @include flex-row;
   @include align-center;
+  font-family: $font-family;
   border: none;
   border-radius: 8px;
   padding: 0.5em 1.5em;
   transition: all 150ms;
   color: $color-white;
+  cursor: pointer;
   gap: 8px;
   &--primary {
     background-color: $color-primary;
@@ -16,20 +18,26 @@
       fill: $color-primary;
       color: $color-primary;
     }
+    &__icon {
+      @include button-icon;
+      &:hover {
+        color: $color-primary;
+      }
+    }
   }
   &--secondary {
     background-color: $color-secondary;
     &:hover {
       color: $color-secondary;
     }
+    &__icon {
+      @include button-icon;
+      &:hover {
+        color: $color-primary;
+      }
+    }
   }
   &:hover {
     background-color: $color-quaternary;
-  }
-  &__icon {
-    display: inline-block;
-    color: $color-white;
-    width: 16px;
-    height: 16px;
   }
 }

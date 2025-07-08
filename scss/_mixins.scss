@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -24,4 +26,11 @@
 
 @mixin text-center {
   text-align: center;
+}
+
+@mixin button-icon {
+  display: inline-block;
+  color: $color-white;
+  width: 16px;
+  height: 16px;
 }
