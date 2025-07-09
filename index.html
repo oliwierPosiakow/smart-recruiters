@@ -26,11 +26,12 @@
       <section class="section section--center">
         <h2 class="section__title">Gallery Heading</h2>
         <p class="section__content">
-          Gallery paragraph - Lorem <span class="text--italic">ipsum</span> dolor sit amet,
-          <span class="text--bold">consectetur</span> adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad
-          <span class="link">minim</span> veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
+          Gallery paragraph - Lorem
+          <span class="text--italic">ipsum</span> dolor sit amet,
+          <span class="text--bold">consectetur</span> adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          <a href="#" class="link">minim</a> veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </section>
       <section class="section section--center">
@@ -40,33 +41,64 @@
             Gallery Link One
             <i class="fa-solid fa-star button__icon"></i>
           </button>
-          <button class="button button--secondary">Gallery Link One</button>
+          <button class="button button--secondary">Gallery Link Two</button>
         </div>
       </section>
       <section class="gallery">
-        <figure class="gallery__item gallery__item--1">
-          <img src="assets/images/sr_bg_1.png" class="gallery__img" alt="" />
-        </figure>
-        <figure class="gallery__item gallery__item--2">
-          <img src="assets/images/sr_work_bg.png" class="gallery__img" alt="" />
-        </figure>
-        <figure class="gallery__item gallery__item--3">
-          <img src="assets/images/sr_city_bg.png" class="gallery__img" alt="" />
-        </figure>
-        <figure class="gallery__item gallery__item--4">
-          <img src="assets/images/sr_bg_2.png" class="gallery__img" alt="" />
-        </figure>
-        <figure class="gallery__item gallery__item--5">
+        <button class="gallery__item gallery__item--1">
           <img
-            src="assets/images/sr_study_bg.png"
-            class="gallery__img"
+            src="assets/images/sr_bg_1.png"
+            class="gallery__img gallery__img--1"
             alt=""
           />
-        </figure>
+        </button>
+
+        <button class="gallery__item gallery__item--2">
+          <img
+            src="assets/images/sr_work_bg.png"
+            class="gallery__img gallery__img--2"
+            alt=""
+          />
+        </button>
+        <button class="gallery__item gallery__item--3">
+          <img
+            src="assets/images/sr_city_bg.png"
+            class="gallery__img gallery__img--3"
+            alt=""
+          />
+        </button>
+        <button class="gallery__item gallery__item--4">
+          <img src="assets/images/sr_bg_2.png" class="gallery__img" alt="" />
+        </button>
+        <button class="gallery__item gallery__item--5">
+          <img
+            src="assets/images/sr_study_bg.png"
+            class="gallery__img gallery__img--5"
+            alt=""
+          />
+        </button>
       </section>
       <section class="section">
-        <p class="section__content text--sm text--color-black"><span class="text--bold">Gallery media copyright</span> - Lorem ipsum dolor sit amet.</p>
+        <p class="section__content text--sm text--color-black">
+          <span class="text--bold">Gallery media copyright</span> - Lorem ipsum
+          dolor sit amet.
+        </p>
       </section>
     </main>
+    <dialog class="modal" id="modal">
+      <div class="modal__header">
+        <h2>Modal Heading</h2>
+        <button id="modal-close">X</button>
+      </div>
+      <p class="section__content">
+        Lorem <span class="text--italic">ipsum</span> dolor sit amet,
+        <span class="text--bold">consectetur</span> adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        <a href="#" class="link">minim</a> veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <img class="modal__image" src="" alt="">
+    </dialog>
   </body>
+  <script src="./js/script.js"></script>
 </html>

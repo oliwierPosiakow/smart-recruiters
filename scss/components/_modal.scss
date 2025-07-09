@@ -1,0 +1,44 @@
+@use "../variables";
+@use "../mixins";
+@use "../animations";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  border-width: 0;
+  padding: 1.875em;
+  background: linear-gradient(variables.$color-quaternary 100%, variables.$color-white 100%);
+  &__header {
+    @include mixins.flex-row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__image {
+    flex: 1;
+    background-color: red;
+    border-radius: variables.$image-border-radius;
+  }
+}
+
+.modal:modal {
+  max-width: 100vh;
+  max-height: 100vh;
+}
+.modal::backdrop {
+  background: none;
+}
+
+.modal[open] {
+  @include mixins.flex-column;
+  @include animations.fade-in;
+  gap: 20px;
+}
+
+.modal[close] {
+  @include animations.fade-out;
+}
