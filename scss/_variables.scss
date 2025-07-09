@@ -30,7 +30,7 @@ $font-weight-bold: 700;
 $font-line-height: 140%;
 $font-line-height-heading: 110.00000000000001%;
 
-$font-letter-spacing-none: 0%;
+$font-letter-spacing-none: 0;
 
 $font-paragraph-spacing-heading: 0.5625rem;
 $font-paragraph-spacing-p: 1.25rem;
@@ -94,6 +94,8 @@ p + p {
     margin-top: $font-paragraph-spacing-heading;
 }
 
+// Elements
+
 button {
   font-size: $font-size-md;
   font-weight: $font-weight-bolder;
@@ -102,3 +104,7 @@ button {
   text-transform: capitalize;
   vertical-align: center;
 }
+
+$image-border-radius: 20px;
+
+

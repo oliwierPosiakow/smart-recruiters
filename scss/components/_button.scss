@@ -1,6 +1,11 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
+button {
+  cursor: pointer;
+  padding: 0;
+}
+
 .button {
   @include flex-row;
   @include align-center;
@@ -10,7 +15,6 @@
   padding: 0.5em 1.5em;
   transition: all 150ms;
   color: $color-white;
-  cursor: pointer;
   gap: 8px;
   &--primary {
     background-color: $color-primary;

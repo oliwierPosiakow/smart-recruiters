@@ -1,10 +1,13 @@
 @use '../mixins' as *;
+@use '../layout' as *;
 
 .section {
   @include gap;
   @include flex-column;
   &__title {
-    @include text-center;
+    @media screen and (min-width: $breakpoint-md) {
+      @include text-center;
+    }
   }
   &__content {
     max-width: 800px;
@@ -14,7 +17,9 @@
     gap: 15px;
   }
   &--center {
-    @include flex-center;
+    @media screen and (min-width: $breakpoint-md) {
+      @include flex-center;
+    }
 
   }
 }
