@@ -34,3 +34,7 @@
   width: 16px;
   height: 16px;
 }
+
+@mixin icon-button-icon {
+  color: $color-white;
+}

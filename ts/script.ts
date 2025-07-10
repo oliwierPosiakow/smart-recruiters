@@ -6,10 +6,24 @@ const galleryButtons = document.querySelectorAll('.gallery__item');
 const modal: HTMLDialogElement = document.querySelector('#modal');
 const modalCloseButton: HTMLButtonElement =
   document.querySelector('#modal-close');
+const modalImage: HTMLImageElement = document.querySelector('#modal-image');
 
-//For each gallery item, add an event listener to open the modal, and disable body scroll
+//For each gallery item, add an event listener to open the modal and disable body scroll and set the modal image
 galleryButtons.forEach((item) => {
+  if (item.classList.contains('movie')) {
+    console.log('FILM');
+  }
   item.addEventListener('click', () => {
+    console.log('click');
+    const img: HTMLImageElement | undefined = Array.from(item.children).find(
+      (child) => child instanceof HTMLImageElement,
+    );
+
+    if (img) {
+      modalImage.src = img.src;
+      modalImage.alt = img.alt;
+    }
+
     if (!modal.open) {
       modal.showModal();
       body.classList.add('scroll-disabled');
@@ -22,5 +36,7 @@ modalCloseButton.addEventListener('click', () => {
   if (modal.open) {
     modal.close();
     body.classList.remove('scroll-disabled');
+    modalImage.src = '';
+    modalImage.alt = 'Placeholder modal image';
   }
 });

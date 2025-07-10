@@ -1,6 +1,7 @@
-@use "../variables";
-@use "../mixins";
-@use "../animations";
+@use '../variables';
+@use '../mixins';
+@use '../animations';
+@use '../layout';
 
 .modal {
   position: fixed;
@@ -9,10 +10,13 @@
   z-index: 10;
   width: 100vw;
   height: 100vh;
-  margin: 0;
   border-width: 0;
+  margin: 0;
   padding: 1.875em;
-  background: linear-gradient(variables.$color-quaternary 100%, variables.$color-white 100%);
+  background: linear-gradient(
+    variables.$color-quaternary 100%,
+    variables.$color-white 100%
+  );
   &__header {
     @include mixins.flex-row;
     justify-content: space-between;
@@ -20,17 +24,39 @@
   }
   &__image {
     flex: 1;
-    background-color: red;
     border-radius: variables.$image-border-radius;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
 .modal:modal {
-  max-width: 100vh;
-  max-height: 100vh;
+  min-width: 100dvw;
+  min-height: 100vh;
+  @media screen and (min-width: layout.$breakpoint-md) {
+    margin: auto;
+    padding-top: 2.0625em;
+    max-width: 80dvw;
+    min-width: unset;
+    min-height: unset;
+    height: auto;
+    border-radius: variables.$image-border-radius;
+  }
+  @media screen and (min-width: layout.$breakpoint-lg) {
+    min-width: 60dvw;
+    width: 100%;
+    max-width: 1260px;
+    max-height: 889px;
+  }
 }
 .modal::backdrop {
   background: none;
+  @media screen and (min-width: layout.$breakpoint-md) {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+
 }
 
 .modal[open] {
