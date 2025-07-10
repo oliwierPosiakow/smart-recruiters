@@ -52,7 +52,6 @@
             alt=""
           />
         </button>
-
         <button class="gallery__item gallery__item--2">
           <img
             src="assets/images/sr_work_bg.png"
@@ -67,7 +66,7 @@
             alt=""
           />
         </button>
-        <button class="gallery__item gallery__item--4">
+        <button class="gallery__item gallery__item--4 movie">
           <img src="assets/images/sr_bg_2.png" class="gallery__img" alt="" />
         </button>
         <button class="gallery__item gallery__item--5">
@@ -88,7 +87,9 @@
     <dialog class="modal" id="modal">
       <div class="modal__header">
         <h2>Modal Heading</h2>
-        <button id="modal-close">X</button>
+        <button class="icon-button icon-button--danger" id="modal-close">
+          <i class="fa-solid fa-xmark fa-xl icon-button--danger__icon"></i>
+        </button>
       </div>
       <p class="section__content">
         Lorem <span class="text--italic">ipsum</span> dolor sit amet,
@@ -97,7 +98,7 @@
         <a href="#" class="link">minim</a> veniam, quis nostrud exercitation
         ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
-      <img class="modal__image" src="" alt="">
+      <img class="modal__image" id="modal-image" src="" alt="Placeholder modal image">
     </dialog>
   </body>
   <script src="./js/script.js"></script>

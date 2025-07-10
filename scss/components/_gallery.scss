@@ -6,7 +6,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 250px 220px 250px;
   grid-gap: 30px;
   &__img {
     width: 100%;
@@ -14,16 +14,16 @@
     object-fit: cover;
     border-radius: variables.$image-border-radius;
     &--1 {
-      object-position: bottom 0 right -26em;
+      object-position: bottom 0 right 74%;
     }
     &--2 {
-      object-position: bottom 0 right -22.75em;
+      object-position: bottom 0 right 73%;
     }
     &--3 {
-      object-position: bottom 0 left -10.5em;
+      object-position: bottom 0 left 23%;
     }
     &--5 {
-        object-position: bottom 0 left -29.25em;
+        object-position: bottom 0 left 36.5%;
     }
   }
   &__item {

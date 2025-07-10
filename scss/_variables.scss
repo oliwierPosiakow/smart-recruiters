@@ -103,6 +103,10 @@ button {
   letter-spacing: $font-letter-spacing-none;
   text-transform: capitalize;
   vertical-align: center;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  gap: 8px;
 }
 
 $image-border-radius: 20px;

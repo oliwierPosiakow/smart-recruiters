@@ -1,21 +1,14 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
-button {
-  cursor: pointer;
-  padding: 0;
-}
-
 .button {
   @include flex-row;
   @include align-center;
   font-family: $font-family;
-  border: none;
   border-radius: 8px;
   padding: 0.5em 1.5em;
   transition: all 150ms;
   color: $color-white;
-  gap: 8px;
   &--primary {
     background-color: $color-primary;
     &:hover {
