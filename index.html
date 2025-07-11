@@ -22,10 +22,10 @@
     <title>Oliwier Posiakow - Smart Recruiters</title>
   </head>
   <body>
-    <main class="content">
-      <section class="section section--center">
-        <h2 class="section__title">Gallery Heading</h2>
-        <p class="section__content">
+    <main class="content" aria-label="Main gallery page content">
+      <section class="section section--center" aria-labelledby="gallery-heading" aria-describedby="gallery-description">
+        <h2 class="section__title" id="gallery-heading">Gallery Heading</h2>
+        <p class="section__content" id="gallery-description" aria-label="Gallery description">
           Gallery paragraph - Lorem
           <span class="text--italic">ipsum</span> dolor sit amet,
           <span class="text--bold">consectetur</span> adipiscing elit, sed do
@@ -34,71 +34,90 @@
           ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </section>
-      <section class="section section--center">
-        <h3 class="section__title">Gallery Links</h3>
+      <section class="section section--center" aria-labelledby="gallery-links">
+        <h3 class="section__title" id="gallery-links">Gallery Links</h3>
         <div class="section__buttons">
           <button class="button button--primary">
             Gallery Link One
-            <i class="fa-solid fa-star button__icon"></i>
+            <i class="fa-solid fa-star button__icon" aria-hidden="true"></i>
           </button>
           <button class="button button--secondary">Gallery Link Two</button>
         </div>
       </section>
-      <section class="gallery">
-        <button class="gallery__item gallery__item--1">
+      <section class="gallery" aria-label="Gallery section">
+        <button class="gallery__item gallery__item--1" aria-label="Open gallery modal with image 1">
           <img
             src="assets/images/sr_bg_1.png"
             class="gallery__img gallery__img--1"
-            alt=""
+            alt="Green smart recruiters robot on blue background"
           />
         </button>
-        <button class="gallery__item gallery__item--2">
+        <button class="gallery__item gallery__item--2" aria-label="Open gallery modal with image 2">
           <img
             src="assets/images/sr_work_bg.png"
             class="gallery__img gallery__img--2"
-            alt=""
+            alt="People in work office, collaborating on a project"
           />
         </button>
-        <button class="gallery__item gallery__item--3">
+        <button class="gallery__item gallery__item--3" aria-label="Open gallery modal with image 3">
           <img
             src="assets/images/sr_city_bg.png"
             class="gallery__img gallery__img--3"
-            alt=""
+            alt="City skyline during sunset in cartoon style"
           />
         </button>
-        <button class="gallery__item gallery__item--4 movie">
-          <img src="assets/images/sr_bg_2.png" class="gallery__img" alt="" />
+        <button
+          class="gallery__item gallery__item--4 movie"
+          aria-label="Open gallery modal with video about smart recruiters"
+          data-video-url="https://www.youtube.com/embed/x6iyz1AQhuU?autoplay=1&mute=1"
+        >
+          <img src="assets/images/sr_bg_2.png" class="gallery__img"             alt="Smart recruiters robot browsing applications"
+          />
         </button>
-        <button class="gallery__item gallery__item--5">
+        <button class="gallery__item gallery__item--5" aria-label="Open gallery modal with image 4">
           <img
             src="assets/images/sr_study_bg.png"
             class="gallery__img gallery__img--5"
-            alt=""
+            alt="People studying in a library, working on laptops"
           />
         </button>
       </section>
-      <section class="section">
-        <p class="section__content text--sm text--color-black">
-          <span class="text--bold">Gallery media copyright</span> - Lorem ipsum
+      <section class="section" aria-label="Gallery footer">
+        <p class="section__content text--sm text--color-black" aria-labelledby="footer-title">
+          <span class="text--bold" id="footer-title">Gallery media copyright</span> - Lorem ipsum
           dolor sit amet.
         </p>
       </section>
     </main>
-    <dialog class="modal" id="modal">
+    <dialog class="modal" id="modal" aria-labelledby="modal-heading" aria-describedby="modal-description">
       <div class="modal__header">
-        <h2>Modal Heading</h2>
-        <button class="icon-button icon-button--danger" id="modal-close">
-          <i class="fa-solid fa-xmark fa-xl icon-button--danger__icon"></i>
+        <h2 id="modal-heading">Modal Heading</h2>
+        <button class="icon-button icon-button--danger" id="modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark fa-xl icon-button__icon" aria-hidden="true"></i>
         </button>
       </div>
-      <p class="section__content">
+      <p class="section__content" id="modal-description" aria-label="Modal description">
         Lorem <span class="text--italic">ipsum</span> dolor sit amet,
         <span class="text--bold">consectetur</span> adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
         <a href="#" class="link">minim</a> veniam, quis nostrud exercitation
         ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
-      <img class="modal__image" id="modal-image" src="" alt="Placeholder modal image">
+      <img
+        class="modal__image"
+        id="modal-image"
+        src="assets/images/sr_bg_1.png"
+        alt="Green smart recruiters robot on blue background"
+      />
+      <iframe
+        class="hidden modal__image"
+        id="modal-video"
+        width="100%"
+        height="100%"
+        aria-label="Modal video"
+        src="https://www.youtube.com/embed/x6iyz1AQhuU"
+      >
+      </iframe>
     </dialog>
   </body>
   <script src="./js/script.js"></script>

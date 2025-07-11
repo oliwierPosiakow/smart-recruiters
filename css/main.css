@@ -181,6 +181,7 @@ button {
   background-color: #076d59;
 }
 .button--secondary:hover {
+  fill: #076d59;
   color: #076d59;
 }
 .button--secondary__icon {
@@ -190,7 +191,7 @@ button {
   height: 16px;
 }
 .button--secondary__icon:hover {
-  color: #13304a;
+  color: #076d59;
 }
 .button:hover {
   background-color: #e9ece7;
@@ -200,8 +201,8 @@ button {
   box-sizing: border-box;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 250px 220px 250px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
   grid-gap: 30px;
 }
 .gallery__img {
@@ -223,44 +224,50 @@ button {
   object-position: bottom 0 left 36.5%;
 }
 .gallery__item {
+  position: relative;
   border-width: 0;
   background-color: transparent;
 }
-.gallery__item--1 {
+.gallery__item--1, .gallery__item--2, .gallery__item--3, .gallery__item--4, .gallery__item--5 {
   grid-column: 1;
-  grid-row: 1/span 2;
-  object-position: left top;
+  grid-row: auto;
 }
-.gallery__item--2 {
-  grid-column: 2;
-  grid-row: 1/span 2;
+.gallery__item--1, .gallery__item--2, .gallery__item--5 {
+  min-height: 500px;
 }
-.gallery__item--3 {
-  grid-column: 1/span 2;
-  grid-row: 3;
+.gallery__item--3, .gallery__item--4 {
+  min-height: 250px;
 }
-.gallery__item--4 {
-  grid-column: 3;
-  grid-row: 1;
+.gallery__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.gallery__item--5 {
-  grid-column: 3;
-  grid-row: 2/span 2;
-}
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .gallery {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px 220px 250px;
   }
-  .gallery__item--1, .gallery__item--2, .gallery__item--3, .gallery__item--4, .gallery__item--5 {
+  .gallery__item--1 {
     grid-column: 1;
-    grid-row: auto;
+    grid-row: 1/span 2;
   }
-  .gallery__item--1, .gallery__item--2, .gallery__item--5 {
-    min-height: 500px;
+  .gallery__item--2 {
+    grid-column: 2;
+    grid-row: 1/span 2;
   }
-  .gallery__item--3, .gallery__item--4 {
-    min-height: 250px;
+  .gallery__item--3 {
+    grid-column: 1/span 2;
+    grid-row: 3;
+  }
+  .gallery__item--4 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .gallery__item--5 {
+    grid-column: 3;
+    grid-row: 2/span 2;
   }
 }
 
@@ -337,18 +344,20 @@ a {
   min-width: 100dvw;
   min-height: 100vh;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .modal:modal {
     margin: auto;
     padding-top: 2.0625em;
-    max-width: 80dvw;
-    min-width: unset;
-    min-height: unset;
-    height: auto;
+    min-width: 200px;
+    width: 70dvw;
+    max-width: 800px;
+    min-height: 200px;
+    height: 100%;
+    max-height: 800px;
     border-radius: 20px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1400px) {
   .modal:modal {
     min-width: 60dvw;
     width: 100%;
@@ -360,7 +369,7 @@ a {
 .modal::backdrop {
   background: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .modal::backdrop {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
@@ -385,10 +394,15 @@ a {
   width: 48px;
   height: 48px;
   padding: 0.5em;
+  transition: all 150ms;
   border-radius: 48px;
+  color: #ffffff;
 }
 .icon-button--primary {
   background-color: #13304a;
+}
+.icon-button--primary:hover {
+  color: #13304a;
 }
 .icon-button--primary__icon {
   color: #ffffff;
@@ -399,6 +413,9 @@ a {
 .icon-button--secondary {
   background-color: #076d59;
 }
+.icon-button--secondary:hover {
+  color: #076d59;
+}
 .icon-button--secondary__icon {
   color: #ffffff;
 }
@@ -408,11 +425,29 @@ a {
 .icon-button--danger {
   background-color: #9f0000;
 }
+.icon-button--danger:hover {
+  color: #9f0000;
+}
 .icon-button--danger__icon {
   color: #ffffff;
 }
 .icon-button--danger__icon:hover {
   color: #9f0000;
+}
+.icon-button:hover {
+  background-color: #e9ece7;
+}
+
+.pl-12 {
+  padding-left: 0.75em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.scroll-disabled {
+  overflow: hidden;
 }
 
 body {
@@ -425,10 +460,6 @@ body {
   color: #222222;
   font-family: "Inter", sans-serif;
   background: linear-gradient(#ffffff 100%, #e9ece7 100%);
-}
-
-.scroll-disabled {
-  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

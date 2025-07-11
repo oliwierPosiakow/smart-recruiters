@@ -1,37 +1,28 @@
-@use '../mixins';
-@use '../variables';
+@use '../mixins' as *;
+@use '../variables' as *;
 
 .icon-button {
-  @include mixins.flex-center;
+  @include flex-center;
   width: 48px;
   height: 48px;
   padding: 0.5em;
+  transition: all 150ms;
   border-radius: 48px;
+  color: $color-white;
   &--primary {
-    background-color: variables.$color-primary;
-    &__icon {
-        @include mixins.icon-button-icon;
-        &:hover {
-            color: variables.$color-primary;
-        }
-    }
+    @include icon-button($color-primary);
   }
   &--secondary {
-    background-color: variables.$color-secondary;
-    &__icon {
-        @include mixins.icon-button-icon;
-        &:hover {
-            color: variables.$color-secondary;
-        }
-    }
+    @include icon-button($color-secondary);
   }
   &--danger {
-    background-color: variables.$color-danger;
-    &__icon {
-        @include mixins.icon-button-icon;
-        &:hover {
-            color: variables.$color-danger;
-        }
-    }
+    @include icon-button($color-danger);
   }
+  &:hover {
+    background-color: $color-quaternary;
+  }
+}
+
+.pl-12 {
+  padding-left: 0.75em;
 }
