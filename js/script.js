@@ -12,6 +12,7 @@ function closeModal() {
     modalImage.src = '';
     modalImage.alt = 'Placeholder modal image';
     modalImage.classList.remove('hidden');
+    modalVideo.src = '';
     modalVideo.classList.add('hidden');
 }
 //For each gallery item, add an event listener to open the modal and disable body scroll and set the modal image
