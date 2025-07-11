@@ -15,4 +15,4 @@ Take home task for smart recruiters Web Developer role
 4. You can also run `npx tsc --watch` to compile TypeScript files automatically while making changes
 
 #### Online demo
-You can view the online demo of this project at [https://oliwierposiakow-smart-recruiters.netlify.app/](https://oliwierposiakow-smart-recruiters.netlify.app/)
+You can view the online demo of this project at [https://oliwier-posiakow-smart-recruiters.netlify.app/](https://oliwier-posiakow-smart-recruiters.netlify.app/)
