@@ -7,7 +7,7 @@ const modal: HTMLDialogElement = document.querySelector('#modal');
 const modalCloseButton: HTMLButtonElement =
   document.querySelector('#modal-close');
 const modalImage: HTMLImageElement = document.querySelector('#modal-image');
-const modalVideo: HTMLVideoElement = document.querySelector('#modal-video');
+const modalVideo: HTMLIFrameElement = document.querySelector('#modal-video');
 
 function closeModal() {
   modal.close();
@@ -15,6 +15,7 @@ function closeModal() {
   modalImage.src = '';
   modalImage.alt = 'Placeholder modal image';
   modalImage.classList.remove('hidden');
+  modalVideo.src = '';
   modalVideo.classList.add('hidden');
 }
 
