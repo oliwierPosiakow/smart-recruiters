@@ -10,29 +10,10 @@
   transition: all 150ms;
   color: $color-white;
   &--primary {
-    background-color: $color-primary;
-    &:hover {
-      fill: $color-primary;
-      color: $color-primary;
-    }
-    &__icon {
-      @include button-icon;
-      &:hover {
-        color: $color-primary;
-      }
-    }
+    @include button-variant($color-primary);
   }
   &--secondary {
-    background-color: $color-secondary;
-    &:hover {
-      color: $color-secondary;
-    }
-    &__icon {
-      @include button-icon;
-      &:hover {
-        color: $color-primary;
-      }
-    }
+    @include button-variant($color-secondary);
   }
   &:hover {
     background-color: $color-quaternary;

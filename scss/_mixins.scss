@@ -35,6 +35,33 @@
   height: 16px;
 }
 
+@mixin button-variant($color) {
+  background-color: $color;
+  &:hover {
+    fill: $color;
+    color: $color;
+  }
+  &__icon {
+    @include button-icon;
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
+@mixin icon-button($color) {
+  background-color: $color;
+  &:hover {
+    color: $color;
+  }
+  &__icon {
+    @include icon-button-icon;
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
 @mixin icon-button-icon {
   color: $color-white;
 }

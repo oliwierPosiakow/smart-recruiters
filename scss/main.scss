@@ -4,6 +4,7 @@
 @use 'layout' as *;
 @use './components' as *;
 @use 'animations';
+@use 'utils';
 
 body {
   @include flex-column;
@@ -14,8 +15,4 @@ body {
   color: $color-content;
   font-family: $font-family;
   background: linear-gradient($color-white 100%, $color-quaternary 100%);
-}
-
-.scroll-disabled {
-  overflow: hidden;
 }
