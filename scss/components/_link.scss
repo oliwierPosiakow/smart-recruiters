@@ -1,0 +1,15 @@
+@use '../variables' as *;
+
+a {
+  cursor: pointer;
+}
+
+.link {
+  color: $color-secondary;
+  text-decoration: underline;
+  font-weight: $font-weight-bolder;
+}
+
+.link + .link {
+    margin-top: $font-paragraph-spacing-p;
+}

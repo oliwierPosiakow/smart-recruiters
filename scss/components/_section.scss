@@ -1,0 +1,25 @@
+@use '../mixins' as *;
+@use '../layout' as *;
+
+.section {
+  @include gap;
+  @include flex-column;
+  &__title {
+    @media screen and (min-width: $breakpoint-md) {
+      @include text-center;
+    }
+  }
+  &__content {
+    max-width: 800px;
+  }
+  &__buttons {
+    @include flex-row;
+    gap: 15px;
+  }
+  &--center {
+    @media screen and (min-width: $breakpoint-md) {
+      @include flex-center;
+    }
+
+  }
+}

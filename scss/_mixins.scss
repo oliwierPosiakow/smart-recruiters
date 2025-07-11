@@ -1,0 +1,67 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin align-center {
+  align-items: center;
+}
+
+@mixin gap {
+  gap: 20px;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin button-icon {
+  display: inline-block;
+  color: $color-white;
+  width: 16px;
+  height: 16px;
+}
+
+@mixin button-variant($color) {
+  background-color: $color;
+  &:hover {
+    fill: $color;
+    color: $color;
+  }
+  &__icon {
+    @include button-icon;
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
+@mixin icon-button($color) {
+  background-color: $color;
+  &:hover {
+    color: $color;
+  }
+  &__icon {
+    @include icon-button-icon;
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
+@mixin icon-button-icon {
+  color: $color-white;
+}

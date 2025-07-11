@@ -1,0 +1,21 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.button {
+  @include flex-row;
+  @include align-center;
+  font-family: $font-family;
+  border-radius: 8px;
+  padding: 0.5em 1.5em;
+  transition: all 150ms;
+  color: $color-white;
+  &--primary {
+    @include button-variant($color-primary);
+  }
+  &--secondary {
+    @include button-variant($color-secondary);
+  }
+  &:hover {
+    background-color: $color-quaternary;
+  }
+}

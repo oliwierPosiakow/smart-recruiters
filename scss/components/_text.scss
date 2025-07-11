@@ -1,0 +1,16 @@
+@use '../variables' as *;
+
+.text {
+  &--sm {
+    font-size: $font-size-sm;
+  }
+  &--bold {
+    font-weight: $font-weight-bold;
+  }
+  &--color-black {
+    color: $color-black;
+  }
+  &--italic {
+    font-style: italic;
+  }
+}

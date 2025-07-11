@@ -1,0 +1,72 @@
+@use '../variables';
+@use '../mixins';
+@use '../animations';
+@use '../layout';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  border-width: 0;
+  margin: 0;
+  padding: 1.875em;
+  background: linear-gradient(
+    variables.$color-quaternary 100%,
+    variables.$color-white 100%
+  );
+  &__header {
+    @include mixins.flex-row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__image {
+    flex: 1;
+    border-radius: variables.$image-border-radius;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.modal:modal {
+  min-width: 100dvw;
+  min-height: 100vh;
+  @media screen and (min-width: layout.$breakpoint-sm) {
+    margin: auto;
+    padding-top: 2.0625em;
+    min-width: 200px;
+    width: 70dvw;
+    max-width: 800px;
+    min-height: 200px;
+    height: 100%;
+    max-height: 800px;
+    border-radius: variables.$image-border-radius;
+  }
+  @media screen and (min-width: layout.$breakpoint-xxl) {
+    min-width: 60dvw;
+    width: 100%;
+    max-width: 1260px;
+    max-height: 889px;
+  }
+}
+.modal::backdrop {
+  background: none;
+  @media screen and (min-width: layout.$breakpoint-sm) {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+
+}
+
+.modal[open] {
+  @include mixins.flex-column;
+  @include animations.fade-in;
+  gap: 20px;
+}
+
+.modal[close] {
+  @include animations.fade-out;
+}

@@ -1,0 +1,24 @@
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin fade-in {
+  animation: fadein 90ms forwards;
+}
+
+@mixin fade-out {
+  animation: fadeout 90ms backwards;
+}

@@ -1,7 +1,18 @@
 @use 'base' as *;
 @use 'variables' as *;
+@use 'mixins' as *;
+@use 'layout' as *;
+@use './components' as *;
+@use 'animations';
+@use 'utils';
 
 body {
-  font-family: $font-family;
+  @include flex-column;
+  @include align-center;
+  position: relative;
+  z-index: 1;
+  min-height: 100dvh;
   color: $color-content;
+  font-family: $font-family;
+  background: linear-gradient($color-white 100%, $color-quaternary 100%);
 }
